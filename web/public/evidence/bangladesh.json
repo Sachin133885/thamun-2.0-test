@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.0",
+  "kind": "public_evidence",
+  "reviewed_at": "2026-10-07",
+  "live": false,
+  "sources": [
+    {
+      "id": "bb-mfs",
+      "organization": "Bangladesh Bank",
+      "title": "MFS comparative summary: January and February 2025",
+      "tier": 1,
+      "date": null,
+      "period": "2025-02",
+      "url": "https://www.bb.org.bd/en/index.php/financialactivity/mfsdata",
+      "status": "verified",
+      "locator": "Industry Wise Information, rows 3, 6, 7 and 8",
+      "note": "Historical web table, not current-month live data; publication date not supplied.",
+      "checked_at": "2026-10-07"
+    },
+    {
+      "id": "bb-report",
+      "organization": "Bangladesh Bank",
+      "title": "Payment Systems Report — December 2025",
+      "tier": 1,
+      "date": null,
+      "url": "https://www.bb.org.bd/pub/annual/psdreport/paymentreport_dec2025.pdf",
+      "status": "unverified",
+      "locator": null,
+      "note": "Fetch timed out. No values or PDF page claims extracted.",
+      "checked_at": "2026-10-07"
+    },
+    {
+      "id": "police",
+      "organization": "Bangladesh Police",
+      "title": "Official fraud evidence verification",
+      "tier": 1,
+      "date": null,
+      "url": "https://www.police.gov.bd/",
+      "status": "unverified",
+      "note": "No exact national MFS/APP fraud statistic verified from the provided official source.",
+      "checked_at": "2026-10-07"
+    },
+    {
+      "id": "pri",
+      "organization": "Policy Research Institute / FNF",
+      "title": "DFS consumer protection webinar: hosted media coverage",
+      "tier": 2,
+      "date": "2022-03-31",
+      "url": "https://www.pri-bd.org/news_and_events/media-coverage-of-the-pri-fnf-webinar-on-the-state-of-dfs-consumer-protection-in-bangladesh/",
+      "status": "verified",
+      "locator": "Opening hosted Daily Star coverage, paragraphs 1–6",
+      "note": "Institutional host of media summaries of a PRI survey; underlying microdata/methodology not independently inspected.",
+      "checked_at": "2026-10-07"
+    },
+    {
+      "id": "star",
+      "organization": "The Daily Star",
+      "title": "MFS faces growing risk of fraud",
+      "tier": 3,
+      "date": "2024-03-25",
+      "url": "https://www.thedailystar.net/business/news/mfs-faces-growing-risk-fraud-3574906",
+      "retrieval_url": "https://tds-images.thedailystar.net/business/news/mfs-faces-growing-risk-fraud-3574906",
+      "status": "verified",
+      "locator": "Social engineering discussion attributed to DB officer",
+      "note": "Canonical page denied access; text verified on publisher image-domain mirror.",
+      "checked_at": "2026-10-07"
+    },
+    {
+      "id": "dighi",
+      "organization": "The Business Standard",
+      "title": "DB recovers Tk1.62 lakh stolen from actor Dighi’s bKash account",
+      "tier": 3,
+      "date": "2024-02-12",
+      "url": "https://www.tbsnews.net/bangladesh/db-recovers-tk162-lakh-stolen-actor-dighis-bkash-account-791602",
+      "status": "verified",
+      "locator": "Article body: recovery and impersonation account",
+      "checked_at": "2026-10-07"
+    },
+    {
+      "id": "faridpur",
+      "organization": "The Business Standard",
+      "title": "Mobile banking scam, laundering network busted in Faridpur, 5 held",
+      "tier": 3,
+      "date": "2025-07-14",
+      "url": "https://www.tbsnews.net/bangladesh/crime/mobile-banking-scam-laundering-network-busted-faridpur-5-held-1187736",
+      "status": "verified",
+      "locator": "Article body: joint operation and PIN/OTP collection",
+      "checked_at": "2026-10-07"
+    },
+    {
+      "id": "phones",
+      "organization": "BSS via The Business Standard",
+      "title": "Police return 363 stolen mobile phones to owners",
+      "tier": 3,
+      "date": "2025-01-29",
+      "url": "https://www.tbsnews.net/bangladesh/police-return-363-stolen-mobile-phones-owners-1055756",
+      "status": "verified",
+      "locator": "BSS byline and opening phone-recovery paragraphs",
+      "note": "Syndicated BSS article verified at TBS, not a separately verified BSS website page.",
+      "checked_at": "2026-10-07"
+    },
+    {
+      "id": "bss",
+      "organization": "BSS",
+      "title": "Additional MFS case search",
+      "tier": 3,
+      "date": null,
+      "url": "https://www.bssnews.net/",
+      "status": "unverified",
+      "note": "No separate relevant direct BSS article verified; syndicated BSS coverage is listed separately.",
+      "checked_at": "2026-10-07"
+    },
+    {
+      "id": "bb-econ",
+      "organization": "Bangladesh Bank",
+      "title": "Economic data portal",
+      "tier": 1,
+      "date": null,
+      "url": "https://www.bb.org.bd/en/index.php/econdata/index",
+      "status": "not_used",
+      "note": "No additional economic series needed for this scoped evidence set.",
+      "checked_at": "2026-10-07"
+    }
+  ],
+  "items": [
+    {
+      "id": "scale",
+      "source_id": "bb-mfs",
+      "category": "MFS Ecosystem",
+      "title": "A large payment ecosystem",
+      "date": "2025-02",
+      "claim": "February 2025: 671,340,910 transactions; value BDT 164,726.30 crore; active accounts 871.54 lac.",
+      "supports": "Payment scale and active-account counts for this reporting month.",
+      "limitations": "Accounts are not unique people; volume is not fraud prevalence. These values come from a web table, not the unavailable PDF.",
+      "relevance": "Ecosystem context",
+      "feature": "Pre-authorization screening",
+      "metrics": {
+        "transaction_count": 671340910,
+        "transaction_value_crore_bdt": 164726.3,
+        "active_accounts_lac": 871.54
+      },
+      "comparison": [
+        {
+          "month": "2025-01",
+          "value_crore_bdt": 171664.12,
+          "transactions": 721866474
+        },
+        {
+          "month": "2025-02",
+          "value_crore_bdt": 164726.3,
+          "transactions": 671340910
+        }
+      ]
+    },
+    {
+      "id": "consumer",
+      "source_id": "pri",
+      "category": "Consumer Protection",
+      "title": "Consumer vulnerability and redress",
+      "date": "2022-03-31",
+      "claim": "PRI-hosted coverage describes a survey of 7,279 MFS users and reports roughly one in ten experienced fraud.",
+      "supports": "Reported survey evidence of consumer-protection concerns.",
+      "limitations": "Historical survey coverage, not current national prevalence or an APP-only rate; no fresh representative study performed.",
+      "relevance": "Broader MFS fraud relevance",
+      "feature": "Clear explanations and financial education"
+    },
+    {
+      "id": "social",
+      "source_id": "star",
+      "category": "APP / Social Engineering",
+      "title": "Manipulation can precede a payment",
+      "date": "2024-03-25",
+      "claim": "The article describes emotional manipulation persuading people to send money, alongside credential theft.",
+      "supports": "Qualitative relevance of victim-authorized payments.",
+      "limitations": "Media account, not a verified national APP count or a single classified APP incident.",
+      "relevance": "Direct APP relevance",
+      "feature": "Purpose checks and pre-OTP pause"
+    },
+    {
+      "id": "dighi",
+      "source_id": "dighi",
+      "category": "Incident Case Studies",
+      "title": "Dighi bKash recovery",
+      "date": "2024-02-12",
+      "claim": "TBS reports BDT 162,000 recovered after a caller impersonated bKash staff and obtained an OTP.",
+      "supports": "A reported impersonation and OTP-compromise case.",
+      "limitations": "Does not establish that the victim initiated a push payment; not classified as direct APP evidence.",
+      "relevance": "Broader MFS fraud relevance",
+      "feature": "Verification guidance; never share PINs or OTPs",
+      "incident": true,
+      "amount_bdt": 162000,
+      "amount_meaning": "Reported recovered amount",
+      "service": "bKash",
+      "outcome": "Two alleged fraudsters arrested; funds reportedly recovered."
+    },
+    {
+      "id": "faridpur",
+      "source_id": "faridpur",
+      "category": "Incident Case Studies",
+      "title": "Faridpur impersonation investigation",
+      "date": "2025-07-14",
+      "claim": "TBS reports five arrests following alleged customer-care impersonation and PIN/OTP collection.",
+      "supports": "Reported broader MFS fraud investigation.",
+      "limitations": "No comparable total loss amount extracted; credential compromise is not necessarily APP fraud.",
+      "relevance": "Broader MFS fraud relevance",
+      "feature": "Recipient/context checks and verification education",
+      "incident": true,
+      "amount_bdt": null,
+      "service": "bKash / Nagad and other MFS, as reported",
+      "outcome": "Joint army/police operation; detainees handed to police."
+    },
+    {
+      "id": "phones",
+      "source_id": "phones",
+      "category": "Digital Security",
+      "title": "Stolen-device recovery",
+      "date": "2025-01-29",
+      "claim": "BSS reporting carried by TBS describes 363 recovered phones returned to owners.",
+      "supports": "Supporting digital-security context.",
+      "limitations": "Phone counts are not scam-victim counts or APP statistics; excluded from the MFS case timeline count.",
+      "relevance": "Supporting digital-security evidence",
+      "feature": "Security education and account-access safeguards"
+    }
+  ],
+  "notes": {
+    "evidence": "Public Bangladesh sources do not consistently classify fraud as Authorized Push Payment (APP) fraud. Direct APP relevance, broader MFS fraud and supporting digital-security evidence are separated.",
+    "ml": "Thamun model evaluation uses synthetic/simulated transaction data and does not establish real-world MFS performance.",
+    "coverage": "Curated evidence set, not a census of Bangladesh incidents. Unverified sources contribute no statistics."
+  }
+}

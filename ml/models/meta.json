@@ -1,0 +1,90 @@
+{
+  "trained_at": "2026-10-06T23:08:59",
+  "versions": {
+    "python": "3.12.14",
+    "lightgbm": "4.7.0",
+    "scikit_learn": "1.8.0",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "data": {
+    "fit_rows": 38760,
+    "valid_rows": 9626,
+    "train_rows": 48386,
+    "train_scams": 278,
+    "valid_customers": 200
+  },
+  "categories": [
+    "groceries",
+    "eating_out",
+    "transport",
+    "shopping",
+    "health",
+    "education",
+    "rent",
+    "family_support",
+    "personal_transfer",
+    "electricity",
+    "gas",
+    "water",
+    "internet",
+    "mobile_recharge",
+    "savings",
+    "business_supplies",
+    "cash_withdrawal",
+    "other"
+  ],
+  "categorizer": {
+    "features": [
+      "type_idx",
+      "cp_type_idx",
+      "merchant_idx",
+      "log_amount",
+      "hour",
+      "dow",
+      "dom",
+      "cp_count",
+      "is_new_cp",
+      "prev_cat_idx",
+      "amt_ratio_type",
+      "amt_pct"
+    ],
+    "rounds": 60,
+    "threshold": 0.9,
+    "valid_accuracy": 0.9568875960939123
+  },
+  "risk": {
+    "features": [
+      "amt_ratio_type",
+      "amt_pct",
+      "amt_pct_type",
+      "amt_ratio_max",
+      "balance_share",
+      "is_new_cp",
+      "cp_count",
+      "cp_age_days",
+      "hour",
+      "hour_share",
+      "is_night",
+      "n_1h",
+      "n_24h",
+      "sum_1h_ratio",
+      "sum_24h_ratio",
+      "new_cp_24h",
+      "mins_since_last",
+      "in_cp_ratio",
+      "in_1h_ratio",
+      "n_out",
+      "type_idx",
+      "cp_type_idx"
+    ],
+    "rounds": 181,
+    "threshold": 0.03700283059364816,
+    "iso_threshold": 0.7849468733926772,
+    "iso_scale": {
+      "low": 0.42202656051871273,
+      "high": 0.6756787605926171
+    },
+    "valid_recall": 0.9482758620689655
+  }
+}

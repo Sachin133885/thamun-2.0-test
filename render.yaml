@@ -1,0 +1,35 @@
+databases:
+  - name: thamun-db
+    plan: free
+
+services:
+  - type: web
+    name: thamun-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r api/requirements.txt && python -m data.generate && python -m ml.train && python -m ml.evaluate
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: thamun-db
+          property: connectionString
+      - key: THAMUN_SECRET
+        generateValue: true
+      - key: ADMIN_KEY
+        generateValue: true
+      - key: AUTH_REQUIRED
+        value: "true"
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "240"
+      - key: LLM_DATA_RESIDENCY
+        value: internal_only
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_MODEL
+        sync: false
+      - key: LLM_BASE_URL
+        sync: false

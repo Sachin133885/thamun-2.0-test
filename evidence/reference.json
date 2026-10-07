@@ -1,0 +1,22 @@
+{
+  "score_edges": [
+    0.01,
+    0.05,
+    0.1,
+    0.25,
+    0.5,
+    0.75
+  ],
+  "score_shares": [
+    0.977456887596094,
+    0.006544774568875961,
+    0.0022854768335757326,
+    0.004259297735300228,
+    0.001973820901724496,
+    0.001246623727404945,
+    0.006233118637024725
+  ],
+  "high_risk_share": 0.01838769997922294,
+  "label": "Synthetic retrospective validation-period reference; serving model includes validation-period training.",
+  "model_sha256": "d7cb2d31b25aef99ac0b33a69324fd1049c11d3e82598f2043af1e645fd629d5"
+}

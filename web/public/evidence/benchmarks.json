@@ -1,0 +1,290 @@
+{
+  "label": "Experimental result on synthetic simulated data; not real MFS performance",
+  "seed": 42,
+  "dataset_sha256": "574c4f12c6ae251148e9884625ddf130fc06c205c0d5c5798c7d28235594f539",
+  "splits": {
+    "fit": {
+      "rows": 38760,
+      "from": "2026-04-01 00:03:58",
+      "to": "2026-07-31 23:48:09"
+    },
+    "validation": {
+      "rows": 9626,
+      "from": "2026-08-01 00:17:16",
+      "to": "2026-08-31 23:59:04"
+    },
+    "test": {
+      "rows": 9178,
+      "from": "2026-09-01 00:33:55",
+      "to": "2026-09-30 23:59:58"
+    }
+  },
+  "protocol": "Fit only on pre-validation records; validation F1 chooses thresholds; final temporal test used once. No refit or test tuning.",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "sklearn": "1.8.0",
+    "lightgbm": "4.7.0"
+  },
+  "models": [
+    {
+      "model": "Logistic Regression \u2014 basic",
+      "features": [
+        "log_amount",
+        "type_idx",
+        "cp_type_idx",
+        "hour"
+      ],
+      "metrics": {
+        "samples": 9178,
+        "positive_samples": 54,
+        "positive_prevalence": 0.005883634778818915,
+        "precision": 0.058823529411764705,
+        "recall": 0.3148148148148148,
+        "f1": 0.09912536443148688,
+        "roc_auc": 0.9528715475668567,
+        "pr_auc_average_precision": 0.05863869179270356,
+        "false_positive_rate": 0.029811486190267425,
+        "false_negative_rate": 0.6851851851851852,
+        "brier_score": 0.09733380084715515,
+        "threshold": 0.92088124242829,
+        "confusion_matrix": [
+          [
+            8852,
+            272
+          ],
+          [
+            37,
+            17
+          ]
+        ]
+      }
+    },
+    {
+      "model": "Random Forest \u2014 basic",
+      "features": [
+        "log_amount",
+        "type_idx",
+        "cp_type_idx",
+        "hour"
+      ],
+      "metrics": {
+        "samples": 9178,
+        "positive_samples": 54,
+        "positive_prevalence": 0.005883634778818915,
+        "precision": 0.07317073170731707,
+        "recall": 0.1111111111111111,
+        "f1": 0.08823529411764706,
+        "roc_auc": 0.953682392388004,
+        "pr_auc_average_precision": 0.0781802625764999,
+        "false_positive_rate": 0.008329679964927663,
+        "false_negative_rate": 0.8888888888888888,
+        "brier_score": 0.04711370427793837,
+        "threshold": 0.88961124494016,
+        "confusion_matrix": [
+          [
+            9048,
+            76
+          ],
+          [
+            48,
+            6
+          ]
+        ]
+      }
+    },
+    {
+      "model": "LightGBM \u2014 basic",
+      "features": [
+        "log_amount",
+        "type_idx",
+        "cp_type_idx",
+        "hour"
+      ],
+      "metrics": {
+        "samples": 9178,
+        "positive_samples": 54,
+        "positive_prevalence": 0.005883634778818915,
+        "precision": 0.16176470588235295,
+        "recall": 0.2037037037037037,
+        "f1": 0.18032786885245902,
+        "roc_auc": 0.9714895188919741,
+        "pr_auc_average_precision": 0.17534210684335208,
+        "false_positive_rate": 0.006247259973695747,
+        "false_negative_rate": 0.7962962962962963,
+        "brier_score": 0.042845880778349325,
+        "threshold": 0.9275030742491469,
+        "confusion_matrix": [
+          [
+            9067,
+            57
+          ],
+          [
+            43,
+            11
+          ]
+        ]
+      }
+    },
+    {
+      "model": "LightGBM + behavioral features",
+      "features": [
+        "log_amount",
+        "type_idx",
+        "cp_type_idx",
+        "hour",
+        "amt_ratio_type",
+        "amt_pct",
+        "amt_pct_type",
+        "amt_ratio_max",
+        "balance_share",
+        "hour_share",
+        "is_night",
+        "n_1h",
+        "n_24h",
+        "sum_1h_ratio",
+        "sum_24h_ratio",
+        "mins_since_last",
+        "in_1h_ratio",
+        "n_out"
+      ],
+      "metrics": {
+        "samples": 9178,
+        "positive_samples": 54,
+        "positive_prevalence": 0.005883634778818915,
+        "precision": 0.5813953488372093,
+        "recall": 0.46296296296296297,
+        "f1": 0.5154639175257731,
+        "roc_auc": 0.9865089223375063,
+        "pr_auc_average_precision": 0.5708348639070915,
+        "false_positive_rate": 0.001972818939061815,
+        "false_negative_rate": 0.5370370370370371,
+        "brier_score": 0.00940733940923928,
+        "threshold": 0.8669354375446066,
+        "confusion_matrix": [
+          [
+            9106,
+            18
+          ],
+          [
+            29,
+            25
+          ]
+        ]
+      }
+    },
+    {
+      "model": "LightGBM + recipient history",
+      "features": [
+        "log_amount",
+        "type_idx",
+        "cp_type_idx",
+        "hour",
+        "amt_ratio_type",
+        "amt_pct",
+        "amt_pct_type",
+        "amt_ratio_max",
+        "balance_share",
+        "hour_share",
+        "is_night",
+        "n_1h",
+        "n_24h",
+        "sum_1h_ratio",
+        "sum_24h_ratio",
+        "mins_since_last",
+        "in_1h_ratio",
+        "n_out",
+        "is_new_cp",
+        "cp_count",
+        "cp_age_days",
+        "new_cp_24h",
+        "in_cp_ratio"
+      ],
+      "metrics": {
+        "samples": 9178,
+        "positive_samples": 54,
+        "positive_prevalence": 0.005883634778818915,
+        "precision": 0.6818181818181818,
+        "recall": 0.5555555555555556,
+        "f1": 0.6122448979591837,
+        "roc_auc": 0.9964339065062432,
+        "pr_auc_average_precision": 0.7442317340632114,
+        "false_positive_rate": 0.0015344147303814116,
+        "false_negative_rate": 0.4444444444444444,
+        "brier_score": 0.0037494740471028074,
+        "threshold": 0.858485529169121,
+        "confusion_matrix": [
+          [
+            9110,
+            14
+          ],
+          [
+            24,
+            30
+          ]
+        ]
+      }
+    },
+    {
+      "model": "LightGBM + stated purpose (idealized)",
+      "features": [
+        "log_amount",
+        "type_idx",
+        "cp_type_idx",
+        "hour",
+        "amt_ratio_type",
+        "amt_pct",
+        "amt_pct_type",
+        "amt_ratio_max",
+        "balance_share",
+        "hour_share",
+        "is_night",
+        "n_1h",
+        "n_24h",
+        "sum_1h_ratio",
+        "sum_24h_ratio",
+        "mins_since_last",
+        "in_1h_ratio",
+        "n_out",
+        "is_new_cp",
+        "cp_count",
+        "cp_age_days",
+        "new_cp_24h",
+        "in_cp_ratio",
+        "purpose_idx"
+      ],
+      "metrics": {
+        "samples": 9178,
+        "positive_samples": 54,
+        "positive_prevalence": 0.005883634778818915,
+        "precision": 0.926829268292683,
+        "recall": 0.7037037037037037,
+        "f1": 0.8,
+        "roc_auc": 0.9990318573724973,
+        "pr_auc_average_precision": 0.9191402251075702,
+        "false_positive_rate": 0.0003288031565103025,
+        "false_negative_rate": 0.2962962962962963,
+        "brier_score": 0.0015773294331144201,
+        "threshold": 0.879177730068833,
+        "confusion_matrix": [
+          [
+            9121,
+            3
+          ],
+          [
+            16,
+            38
+          ]
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Risk models can recover synthetic generator rules; no real-customer validation.",
+    "Purpose ablation uses idealized truthful simulator purpose, unlike incomplete customer answers.",
+    "No timestamped historical scam reports exist in the evaluation dataset; report-feature ablation is not evaluated.",
+    "Basic categorical codes are integer encoded for all baselines; a richer encoding search was not performed.",
+    "Single seed and fixed model configurations; no claim of statistical significance or optimal tuning."
+  ]
+}

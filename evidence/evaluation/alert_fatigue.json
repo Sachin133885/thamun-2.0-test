@@ -1,0 +1,41 @@
+{
+  "label": "Simulation result \u2014 not real customer data",
+  "samples": 9178,
+  "policies": [
+    {
+      "name": "Generic: pause every new-recipient payment",
+      "pause_rate": 0.11026367400305077,
+      "paused": 1012,
+      "fraud_coverage": 0.6666666666666666,
+      "false_pause_rate": 0.10697062691801841,
+      "false_pauses": 976
+    },
+    {
+      "name": "Model only",
+      "pause_rate": 0.004794072782741338,
+      "paused": 44,
+      "fraud_coverage": 0.5555555555555556,
+      "false_pause_rate": 0.0015344147303814116,
+      "false_pauses": 14
+    },
+    {
+      "name": "Purpose rules only (idealized)",
+      "pause_rate": 0.0032686859882327304,
+      "paused": 30,
+      "fraud_coverage": 0.5555555555555556,
+      "false_pause_rate": 0.0,
+      "false_pauses": 0
+    },
+    {
+      "name": "Model + purpose rules, materiality policy",
+      "pause_rate": 0.00610154717803443,
+      "paused": 56,
+      "fraud_coverage": 0.7777777777777778,
+      "false_pause_rate": 0.0015344147303814116,
+      "false_pauses": 14
+    }
+  ],
+  "continuation": null,
+  "cancellation": null,
+  "limitations": "Offline friction proxy. No behavior assumptions, user research, coaching nudges or historical report effects included. Not a full deployed-policy replay."
+}

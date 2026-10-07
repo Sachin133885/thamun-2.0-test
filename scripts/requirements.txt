@@ -1,0 +1,2 @@
+# Optional evidence-PDF regeneration only; not needed by the API.
+reportlab>=4,<5

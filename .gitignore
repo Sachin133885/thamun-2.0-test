@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+.env.local
+node_modules/
+web/dist/
+data/out/*
+!data/out/.gitkeep
+ml/models/*
+!ml/models/.gitkeep
+data/*.db
+data/*.db-journal
+*.sqlite3
+.DS_Store
+.vscode/
